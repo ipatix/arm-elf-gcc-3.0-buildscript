@@ -1,0 +1,18 @@
+--- gcc-3.0/gcc/config/arm/arm.c	2001-06-14 02:38:18.000000000 +0200
++++ gcc-3.0/gcc/config/arm/arm.c	2021-01-21 00:03:40.531448500 +0100
+@@ -8920,6 +8920,7 @@
+    function match the RTX called 'orig'.  If they do then
+    replace them with the RTX called 'new'.  */
+ 
++/*
+ static void
+ replace_symbols_in_block (block, orig, new)
+      tree block;
+@@ -8949,6 +8950,7 @@
+       replace_symbols_in_block (BLOCK_SUBBLOCKS (block), orig, new);
+     }
+ }
++*/
+ 
+ /* Return the number (counting from 0) of the least significant set
+    bit in MASK.  */
