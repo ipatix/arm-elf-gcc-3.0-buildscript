@@ -8,6 +8,8 @@ BINUTILS_PKG="binutils-2.35.1"
 GCC_PKG="gcc-3.0"
 PREFIX_DIR="./install"
 
+PREFIX_DIR="$(readlink -f "$PREFIX_DIR")"
+
 mkdir -p "$PREFIX_DIR"
 
 # download binutils 2.35.1
