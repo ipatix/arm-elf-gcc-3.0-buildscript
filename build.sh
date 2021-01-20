@@ -37,8 +37,7 @@ tar -xvf "$GCC_PKG.tar.bz2"
 patch "$GCC_PKG/gcc/config/arm/arm.c" "gcc-3.0.patch"
 mkdir -p "$GCC_PKG/build"
 pushd "$GCC_PKG/build"
-# TODO remove --disable-multilib
-../configure --host=i686-linux-gnu --build=i686-linux-gnu --target=arm-elf --prefix="$PREFIX_DIR" --with-cpu=arm7tdmi --enable-languages=c --disable-multilib --disable-werror
+../configure --host=i686-linux-gnu --build=i686-linux-gnu --target=arm-elf --prefix="$PREFIX_DIR" --with-cpu=arm7tdmi --enable-languages=c --disable-werror
 make -j$(nproc)
 make install
 popd
